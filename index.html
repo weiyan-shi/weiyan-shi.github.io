@@ -7,8 +7,9 @@
   <title>Weiyan Shi</title>
 
   <meta name="author" content="Weiyan Shi, 石唯妍">
-  <meta name="description" content="Weiyan Shi's academic homepage | Research in Human-Computer Interaction and Ubiquitous Computing.">
-   <meta name="keywords"
+  <meta name="description"
+    content="Weiyan Shi's academic homepage | Research in Human-Computer Interaction and Ubiquitous Computing.">
+  <meta name="keywords"
     content="Weiyan Shi, 石唯妍, Human-Computer Interaction, HCI, Peking University, 北京大学, PKU, Singapore University of Technology and Design, SUTD">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
@@ -44,12 +45,25 @@
                     From 2023 to 2024, I worked as a research assistant at <a
                       href="https://www.a-star.edu.sg/i2r">Institute for Infocomm Research (I2R), A*STAR</a>.
                   </p>
-                  <p style="text-align:center">
-                    <a href="weiyanshi6@gmail.com">Email</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com/citations?user=ywi8b0EAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://orcid.org/0009-0001-6035-9678">ORCID</a>&nbsp;/&nbsp;
-                    <a href="https://github.com/weiyan-shi">Github</a>
+                  <p>
+                    <a href="https://scholar.google.com/citations?user=ywi8b0EAAAAJ&hl=en" target="_blank">Scholar</a>
+                    &nbsp;/&nbsp;
+                    <a href="https://orcid.org/0009-0001-6035-9678" target="_blank">ORCID</a>&nbsp;/&nbsp;
+                    <a href="https://github.com/weiyan-shi" target="_blank">Github</a>
                   </p>
+                  <p>🎀 Email: <span id="email" style="color: rgb(156, 61, 240); cursor: pointer;"
+                      onclick="copyEmail()">weiyanshi6@gmail.com</span></p>
+
+                  <script>
+                    function copyEmail() {
+                      const email = "weiyanshi6@gmail.com";
+                      navigator.clipboard.writeText(email).then(function () {
+                        alert("Email copied to clipboard!");
+                      }, function (err) {
+                        console.error("Error copying email: ", err);
+                      });
+                    }
+                  </script>
                 </td>
                 <td style="padding:2.5%;width:40%;max-width:40%">
                   <img style="width:60%;max-width:60%;object-fit: cover; border-radius: 50%;" alt="profile photo"
@@ -215,12 +229,9 @@
               <tr>
                 <td style="padding:0px">
                   <br>
-                  <p style="text-align:right;font-size:small;">
+                  <p style="text-align:center;font-size:small;">
                     Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source
-                      code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics
-                    tags that you do not want on your own website &mdash; use the github code instead. Also, consider
-                    using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a
-                      href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+                      code</a>.
                   </p>
                 </td>
               </tr>
