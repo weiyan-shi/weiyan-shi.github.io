@@ -174,3 +174,10 @@ p {
   padding: 10px;
   font-size: small;
 }
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.15em;
+  margin: 0 0.2em 0 0.2em;
+}

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = ["header", "about", "news", "publications", "awards", "academic-services", "footer"];
+    const sections = ["header", "about", "education", "news", "publications", "experience", "awards", "services", "footer"];
 
     sections.forEach(section => {
         fetch(`components/${section}.html`)
