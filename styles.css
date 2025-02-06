@@ -90,16 +90,19 @@ ul {
 a {
   color: #1677ff;
   text-decoration: none;
+  font-style: italic;
 }
 
 a:focus,
 a:hover {
   color: #4096ff;
   text-decoration: none;
+  font-style: italic;
 }
 
 #email {
   color: #1677ff;
+  font-style: italic;
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -108,8 +111,8 @@ a:hover {
 #email:hover,
 #email:focus {
   color: #4096ff;
-  /* 与 <a> 的 hover 颜色相同 */
   text-decoration: none;
+  font-style: italic;
 }
 
 
@@ -124,6 +127,12 @@ nav a {
 
 .highlight {
   color: #722ED1;
+  font-style: italic;
+}
+
+.name {
+  color: #FA8C16;
+  font-weight: bold;
 }
 
 .about-content {
