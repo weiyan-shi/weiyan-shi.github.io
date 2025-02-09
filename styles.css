@@ -100,6 +100,14 @@ a:hover {
   font-style: italic;
 }
 
+h2{
+  color: #13C2C2;
+}
+
+h3{
+  color: #52C41A;
+}
+
 #email {
   color: #1677ff;
   font-style: italic;
