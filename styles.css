@@ -158,6 +158,11 @@ nav a {
   border-radius: 50%;
 }
 
+.band-pic img {
+  width: 280px;
+  border-radius: 5%;
+}
+
 /* 🔥 当屏幕小于 768px 时，头像移动到上方 */
 @media (max-width: 768px) {
   .about-content {
