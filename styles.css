@@ -129,9 +129,12 @@ ul {
   margin-right: 0px;
 }
 
-/* 各图标颜色 */
+.x-icon {
+  color: #000000; 
+}
+
 .scholar-icon {
-  color: #1a73e8;
+  color: #174EA6;
 }
 
 .orcid-icon {
