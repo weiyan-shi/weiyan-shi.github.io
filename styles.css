@@ -164,15 +164,15 @@ a:hover {
 }
 
 h2 {
-  color: #13c2c2;
+  color: #1677ff;
 }
 
 .highlight2 {
-  color: #13c2c2;
+  /* color: #13c2c2; */
 }
 
 h3 {
-  color: #52c41a;
+  /* color: #1677ff; */
 }
 
 #email {
@@ -200,12 +200,22 @@ nav a {
 }
 
 .highlight {
-  color: #722ed1;
-  font-style: italic;
+  /* color: #1677ff;
+  font-weight: bold; */
 }
 
 .name {
-  color: #fa8c16;
+  color: #2916ff;
+  font-weight: bold;
+}
+
+.ranka{
+  color: rgb(207, 9, 9);
+  font-weight: bold;
+}
+
+.pp-name{
+  color: #ff9a16;
   font-weight: bold;
 }
 
@@ -228,7 +238,7 @@ nav a {
   width: 280px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 12px #722ed1;
+  box-shadow: 0 0 12px #1677ff;
   margin-bottom: 5px;
 }
 
@@ -250,8 +260,21 @@ nav a {
   font-weight: 700;
 }
 
+.publication-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.conf-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+
 .title {
-  color: #13c2c2;
+  /* color: #13c2c2; */
   width: 250px;
   margin: 0 auto;
 }
@@ -261,7 +284,7 @@ p {
 }
 
 .publication {
-  margin: 0 0 10px 0;
+  /* margin: 0 0 10px 0; */
 }
 
 .footer {
