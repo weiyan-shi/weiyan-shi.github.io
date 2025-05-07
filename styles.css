@@ -171,6 +171,7 @@ h2 {
   /* color: #13c2c2; */
 }
 
+
 h3 {
   /* color: #1677ff; */
 }
@@ -205,7 +206,7 @@ nav a {
 }
 
 .name {
-  color: #2916ff;
+  color: green;
   font-weight: bold;
 }
 
