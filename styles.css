@@ -235,11 +235,27 @@ nav a {
   border-radius: 50%;
 }
 
+.overview img {
+  width: 100%;
+}
+
+.overview{
+  text-align: center;
+}
+
 .band-pic {
   width: 280px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 12px #1677ff;
+  margin-bottom: 5px;
+}
+
+.rednote-pic {
+  height: 400px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ff1668;
   margin-bottom: 5px;
 }
 
