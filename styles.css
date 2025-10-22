@@ -103,6 +103,7 @@ body {
   font-size: 14px;
   max-width: 800px;
   margin: auto;
+  line-height: 1.6;
 }
 
 ul {
@@ -116,7 +117,7 @@ ul {
 }
 
 .link-list a {
-  color: #1677ff;
+  color: #4682b4;
   text-decoration: none;
   margin: 0 6px 0 0;
 }
@@ -150,21 +151,21 @@ ul {
 }
 
 a {
-  color: #1677ff;
+  color: #4682b4;
   text-decoration: none;
   font-style: italic;
 }
 
 a:focus,
 a:hover {
-  color: #4096ff;
+  color: #0056b3;
   text-decoration: none;
   font-style: italic;
   text-decoration: underline;
 }
 
 h2 {
-  color: #1677ff;
+  color: #4682b4;
 }
 
 .highlight2 {
@@ -177,7 +178,7 @@ h3 {
 }
 
 #email {
-  color: #1677ff;
+  color: #4682b4;
   font-style: italic;
   cursor: pointer;
   text-decoration: none;
@@ -206,17 +207,17 @@ nav a {
 }
 
 .name {
-  color: green;
+  color: #1b8e4b;
   font-weight: bold;
 }
 
 .ranka{
-  color: rgb(207, 9, 9);
+  color: #c73939;
   font-weight: bold;
 }
 
 .pp-name{
-  color: #ff9a16;
+  color: #e6a700;
   font-weight: bold;
 }
 
@@ -252,11 +253,11 @@ nav a {
 }
 
 .rednote-pic {
-  height: 400px;
-  width: auto;
+  height: auto;
+  width: 300px;
   border-radius: 8px;
-  box-shadow: 0 0 12px #ff1668;
-  margin-bottom: 5px;
+  /* box-shadow: 0 0 12px #ff1668; */
+  /* margin-bottom: 5px; */
 }
 
 @media (max-width: 768px) {
