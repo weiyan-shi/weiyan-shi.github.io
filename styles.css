@@ -317,3 +317,14 @@ p {
   vertical-align: -0.15em;
   margin: 0 0.2em 0 0.2em;
 }
+
+.news-container {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.news-container ul {
+  margin: 0;
+  padding-left: 20px;
+}
