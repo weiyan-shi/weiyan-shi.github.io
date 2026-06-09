@@ -153,14 +153,14 @@ ul {
 a {
   color: #4682b4;
   text-decoration: none;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 a:focus,
 a:hover {
   color: #0056b3;
   text-decoration: none;
-  font-style: italic;
+  /* font-style: italic; */
   text-decoration: underline;
 }
 
@@ -174,7 +174,7 @@ h2 {
 
 
 h3 {
-  /* color: #1677ff; */
+  /* color: #4f46e5; */
 }
 
 #email {
@@ -202,23 +202,65 @@ nav a {
 }
 
 .highlight {
-  /* color: #1677ff;
+  /* color: #4f46e5;
   font-weight: bold; */
 }
 
 .name {
-  color: #1b8e4b;
-  font-weight: bold;
+    color: #4f46e5;
+
+    text-shadow:
+        0 0 4px rgba(0,0,0,0.15),
+        0 0 12px rgba(0,0,0,0.10),
+        0 0 24px rgba(0,0,0,0.05);
+}
+
+.uni{
+  display: inline-block;
+  color: #fff;
+  background-color: #1b5c02;
+  font-weight: 600;
+  font-size: 0.78em;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .ranka{
-  color: #c73939;
-  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  background-color: #c2410c;
+  font-weight: 600;
+  font-size: 0.78em;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.ads{
+  display: inline-block;
+  color: #fff;
+  background-color: #b39306;
+  font-weight: 600;
+  font-size: 0.78em;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .pp-name{
-  color: #e6a700;
-  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+  background-color: #475569;
+  font-weight: 600;
+  font-size: 0.78em;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .about-content {
@@ -248,7 +290,7 @@ nav a {
   width: 280px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 12px #1677ff;
+  box-shadow: 0 0 12px #4f46e5;
   margin-bottom: 5px;
 }
 
@@ -312,9 +354,9 @@ p {
 }
 
 .icon {
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: -0.15em;
+  width: 1.6em;
+  height: 1.6em;
+  vertical-align: middle;
   margin: 0 0.2em 0 0.2em;
 }
 
