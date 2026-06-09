@@ -313,6 +313,17 @@ nav a {
     width: 120px;
     margin-bottom: 15px;
   }
+
+  .publication-wrapper {
+    flex-direction: column;
+  }
+
+  .conf-logo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    align-self: center;
+  }
 }
 
 .papertitle {
