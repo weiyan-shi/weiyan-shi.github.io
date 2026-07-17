@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 return response.text();
             })
-            .then(data => document.getElementById(section).innerHTML = data)
+            .then(data => {
+                document.getElementById(section).innerHTML = data;
+                if (section === 'footer') {
+                    const d = new Date(document.lastModified);
+                    document.getElementById('last-updated').textContent =
+                        d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) + '.';
+                }
+            })
             .catch(error => console.error(`Error loading ${section}:`, error));
     });
 });
