@@ -186,13 +186,15 @@ a {
 }
 
 a:not(nav a):not(.link-list a):not(.publication a):not(#email) {
-  display: inline-block;
+  display: inline;
   color: #3f6fb5;
   font-weight: 700;
   line-height: 1.2;
   padding: 0 3px;
   border-radius: 4px;
   background: linear-gradient(180deg, transparent 45%, #dfeeff 45%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 a:focus,
