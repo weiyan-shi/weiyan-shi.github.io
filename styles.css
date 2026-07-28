@@ -116,6 +116,24 @@ ul {
   padding: 20px;
 }
 
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chinese-name {
+  color: #475569;
+  font-size: 0.65em;
+  font-weight: 400;
+}
+
+.site-icon {
+  height: 28px;
+}
+
 .link-list a {
   color: #4682b4;
   text-decoration: none;
