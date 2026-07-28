@@ -101,6 +101,7 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
+  color: #42526f;
   max-width: 800px;
   margin: auto;
   line-height: 1.6;
@@ -124,72 +125,57 @@ ul {
   justify-content: center;
 }
 
+.site-name,
 .chinese-name {
-  color: #475569;
-  font-size: 0.86em;
-  font-weight: 400;
+  display: inline-block;
+  color: #3f6fb5;
+  line-height: 1.15;
+  padding: 0 5px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, transparent 48%, #dfeeff 48%);
 }
 
-.site-icon {
-  height: 28px;
+.chinese-name {
+  font-size: 0.86em;
+  font-weight: 400;
 }
 
 .link-list a {
   display: inline-flex;
   align-items: center;
-  color: #6677aa;
-  background-color: #f7f8ff;
-  border: 1px solid #dfe5ff;
-  border-radius: 6px;
+  justify-content: center;
+  color: #5d6f9f;
   font-weight: 700;
   text-decoration: none;
   line-height: 1;
-  margin: 6px 6px 0 0;
-  padding: 5px 8px;
-  transition: background-color 0.18s ease, border-color 0.18s ease,
-    color 0.18s ease, transform 0.18s ease;
+  margin: 8px 12px 0 0;
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .link-list a:hover {
   color: #3f6fb5;
-  background-color: #eef3ff;
-  border-color: #c9d6ff;
   text-decoration: none;
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(1.08);
 }
 
 .link-list i {
-  margin-right: 4px;
+  font-size: 1.35em;
+  margin: 0;
 }
 
-.x-icon {
-  color: #000000; 
-}
-
-.scholar-icon {
-  color: #174EA6;
-}
-
-.orcid-icon {
-  color: #a6ce39; /* ORCID 绿色 */
-}
-
-.github-icon {
-  color: #333; /* GitHub 深灰 */
-}
-
-.linkedin-icon {
-  color: #0a66c2; /* LinkedIn 蓝色 */
-}
-
+.x-icon,
+.scholar-icon,
+.orcid-icon,
+.github-icon,
+.linkedin-icon,
 .pronunciation-icon {
-  color: #8a96c7;
+  color: #5d6f9f;
   margin: 0 2px;
   vertical-align: -1px;
 }
 
 .contact-icon {
-  color: #a85b86;
+  color: #5d6f9f;
   margin-right: 4px;
 }
 
@@ -225,7 +211,12 @@ a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
 }
 
 h2 {
-  color: #4682b4;
+  display: inline-block;
+  color: #3f6fb5;
+  line-height: 1.15;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, transparent 48%, #dfeeff 48%);
 }
 
 .highlight2 {
@@ -238,8 +229,8 @@ h3 {
 }
 
 .copy-email {
-  color: #a85b86;
-  border-bottom: 2px dotted #ffd7e8;
+  color: #3f6fb5;
+  border-bottom: 2px dotted #c9d6ff;
   font-style: normal;
   font-weight: 700;
   cursor: pointer;
@@ -249,8 +240,8 @@ h3 {
 
 .copy-email:hover,
 .copy-email:focus {
-  color: #8f4d78;
-  border-bottom-color: #ffb9d8;
+  color: #2f5ea7;
+  border-bottom-color: #9db7ff;
   text-decoration: none;
   font-style: normal;
 }
@@ -338,9 +329,9 @@ nav a:focus {
 
 .ranka{
   display: inline-block;
-  color: #c43d7a;
-  background-color: #ffe3ef;
-  border: 1px solid #ffaad0;
+  color: #8a6a00;
+  background-color: #fff6cf;
+  border: 1px solid #ffe58a;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -351,9 +342,9 @@ nav a:focus {
 
 .ads{
   display: inline-block;
-  color: #a66a00;
-  background-color: #fff1ad;
-  border: 1px solid #ffd76a;
+  color: #16834f;
+  background-color: #e7fbef;
+  border: 1px solid #b6efcc;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -387,10 +378,6 @@ nav a:focus {
 
 .research-interest {
   display: inline;
-  background: linear-gradient(180deg, transparent 54%, #fff6cf 54%);
-  border-radius: 4px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }
 
 .research-term {
@@ -403,12 +390,11 @@ nav a:focus {
   vertical-align: 0;
 }
 
-.human-icon {
-  color: #6b7ab8;
-}
-
-.ai-icon {
-  color: #a85b86;
+.human-icon,
+.ai-icon,
+.align-icon,
+.communication-icon {
+  color: #5d6f9f;
 }
 
 .profile-pic img {
@@ -430,6 +416,18 @@ nav a:focus {
   line-height: 1.45;
   margin: 8px auto 0;
   max-width: 620px;
+}
+
+.overview-term {
+  color: #3f6fb5;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.overview-icon {
+  color: #5d6f9f;
+  font-size: 0.9em;
+  margin-right: 3px;
 }
 
 .band-pic {
@@ -526,9 +524,9 @@ p {
 
 .publication a:hover,
 .publication a:focus {
-  color: #a85b86;
-  background-color: #fff1f7;
-  border-color: #ffd7e8;
+  color: #2f5ea7;
+  background-color: #eef3ff;
+  border-color: #c9d6ff;
   text-decoration: none;
   transform: translateY(-1px);
 }
@@ -555,4 +553,12 @@ p {
 .news-container ul {
   margin: 0;
   /* padding-left: 20px; */
+}
+
+.news-icon {
+  color: #5d6f9f;
+  font-size: 0.9em;
+  margin: 0 5px 0 2px;
+  width: 1em;
+  text-align: center;
 }
