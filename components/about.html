@@ -1,7 +1,11 @@
 <div class="section">
   <div class="about-content">
     <div class="text">
-      <div>👋 Hi there! I'm Weiyan, pronounced WAY-yen.</div>
+      <div>
+        👋 Hi there! I'm Weiyan,
+        <i class="fas fa-volume-up pronunciation-icon" title="pronounced"></i>
+        WAY-yen.
+      </div>
       <div>
         I'm currently a Ph.D. student at
         <a href="https://www.cailab.info/" target="_blank"
@@ -11,10 +15,16 @@
           >Singapore University of Technology and Design (SUTD)</a
         >.
       </div>
-      <div>
-        My research interest is multimodal human-centred AI, exploring how
-        humans and multimodal AI can align understanding and communication for
-        better collaboration.
+      <div class="research-interest">
+        My research explores
+        <span class="research-term"
+          ><i class="fas fa-user research-icon human-icon"></i>human</span
+        >
+        interaction with
+        <span class="research-term"
+          ><i class="fas fa-robot research-icon ai-icon"></i>multimodal AI</span
+        >, focusing on how humans and AI can mutually align their understanding
+        and communication for better collaboration.
       </div>
       <div class="link-list">
         <a href="https://x.com/weiyanshi6" target="_blank">
@@ -35,13 +45,20 @@
       </div>
       <br />
       <div>
-        💌 Contact:
+        <i class="fas fa-envelope contact-icon" title="email"></i>
         <span
           id="email"
           class="copy-email"
           style="cursor: pointer"
-          onclick="copyEmail()"
+          onclick="copyEmail(this)"
           >weiyanshi6@gmail.com</span
+        >
+        <span class="email-divider">/</span>
+        <span
+          class="copy-email"
+          style="cursor: pointer"
+          onclick="copyEmail(this)"
+          >weiyan_shi@mymail.sutd.edu.sg</span
         >
       </div>
     </div>

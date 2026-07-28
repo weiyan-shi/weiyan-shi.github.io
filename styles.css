@@ -119,14 +119,14 @@ ul {
 .site-title {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .chinese-name {
   color: #475569;
-  font-size: 0.65em;
+  font-size: 0.86em;
   font-weight: 400;
 }
 
@@ -135,17 +135,31 @@ ul {
 }
 
 .link-list a {
-  color: #4682b4;
+  display: inline-flex;
+  align-items: center;
+  color: #6677aa;
+  background-color: #f7f8ff;
+  border: 1px solid #dfe5ff;
+  border-radius: 6px;
+  font-weight: 700;
   text-decoration: none;
-  margin: 0 6px 0 0;
+  line-height: 1;
+  margin: 6px 6px 0 0;
+  padding: 5px 8px;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease, transform 0.18s ease;
 }
 
 .link-list a:hover {
-  text-decoration: underline;
+  color: #3f6fb5;
+  background-color: #eef3ff;
+  border-color: #c9d6ff;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .link-list i {
-  margin-right: 0px;
+  margin-right: 4px;
 }
 
 .x-icon {
@@ -168,10 +182,31 @@ ul {
   color: #0a66c2; /* LinkedIn 蓝色 */
 }
 
+.pronunciation-icon {
+  color: #8a96c7;
+  margin: 0 2px;
+  vertical-align: -1px;
+}
+
+.contact-icon {
+  color: #a85b86;
+  margin-right: 4px;
+}
+
 a {
   color: #4682b4;
   text-decoration: none;
   /* font-style: italic; */
+}
+
+a:not(nav a):not(.link-list a):not(.publication a):not(#email) {
+  display: inline-block;
+  color: #3f6fb5;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 3px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, transparent 45%, #dfeeff 45%);
 }
 
 a:focus,
@@ -180,6 +215,13 @@ a:hover {
   text-decoration: none;
   /* font-style: italic; */
   text-decoration: underline;
+}
+
+a:not(nav a):not(.link-list a):not(.publication a):not(#email):hover,
+a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
+  color: #2f5ea7;
+  background: linear-gradient(180deg, transparent 38%, #cfe5ff 38%);
+  text-decoration: none;
 }
 
 h2 {
@@ -195,23 +237,44 @@ h3 {
   /* color: #4f46e5; */
 }
 
-#email {
-  color: #4682b4;
-  font-style: italic;
+.copy-email {
+  color: #a85b86;
+  border-bottom: 2px dotted #ffd7e8;
+  font-style: normal;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: border-color 0.18s ease, color 0.18s ease;
 }
 
-#email:hover,
-#email:focus {
-  color: #4096ff;
+.copy-email:hover,
+.copy-email:focus {
+  color: #8f4d78;
+  border-bottom-color: #ffb9d8;
   text-decoration: none;
-  font-style: italic;
+  font-style: normal;
+}
+
+.email-divider {
+  color: #c5bfd0;
+  margin: 0 5px;
 }
 
 nav a {
+  display: inline-block;
+  color: #6677aa;
+  border-bottom: 2px dotted transparent;
+  font-weight: 700;
   margin: 0 10px;
+  padding-bottom: 2px;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #3f6fb5;
+  border-bottom-color: #c9d6ff;
+  text-decoration: none;
 }
 
 .section {
@@ -225,18 +288,46 @@ nav a {
 }
 
 .name {
-    color: #4f46e5;
+  display: inline-block;
+  color: #3f6fb5;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, transparent 45%, #dfeeff 45%);
+  text-shadow: none;
+}
 
-    text-shadow:
-        0 0 4px rgba(0,0,0,0.15),
-        0 0 12px rgba(0,0,0,0.10),
-        0 0 24px rgba(0,0,0,0.05);
+.venue-name {
+  display: inline;
+  color: #5f6f89;
+  background: linear-gradient(180deg, transparent 60%, #f3f8ff 60%);
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.date-tag {
+  display: inline-block;
+  color: #5d6f9f;
+  background-color: #f5f7ff;
+  border: 1px solid #dde5ff;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.78em;
+  line-height: 1;
+  padding: 3px 6px;
+  margin-right: 4px;
+  vertical-align: 1px;
 }
 
 .uni{
   display: inline-block;
-  color: #fff;
-  background-color: #1b5c02;
+  color: #16834f;
+  background-color: #dffbec;
+  border: 1px solid #9af0bf;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -247,8 +338,9 @@ nav a {
 
 .ranka{
   display: inline-block;
-  color: #fff;
-  background-color: #c2410c;
+  color: #c43d7a;
+  background-color: #ffe3ef;
+  border: 1px solid #ffaad0;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -259,8 +351,9 @@ nav a {
 
 .ads{
   display: inline-block;
-  color: #fff;
-  background-color: #b39306;
+  color: #a66a00;
+  background-color: #fff1ad;
+  border: 1px solid #ffd76a;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -271,8 +364,9 @@ nav a {
 
 .pp-name{
   display: inline-block;
-  color: #fff;
-  background-color: #475569;
+  color: #4761c9;
+  background-color: #e8ecff;
+  border: 1px solid #b7c3ff;
   font-weight: 600;
   font-size: 0.78em;
   line-height: 1;
@@ -291,6 +385,32 @@ nav a {
   margin-right: 20px;
 }
 
+.research-interest {
+  display: inline;
+  background: linear-gradient(180deg, transparent 54%, #fff6cf 54%);
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.research-term {
+  white-space: nowrap;
+}
+
+.research-icon {
+  font-size: 0.86em;
+  margin-right: 3px;
+  vertical-align: 0;
+}
+
+.human-icon {
+  color: #6b7ab8;
+}
+
+.ai-icon {
+  color: #a85b86;
+}
+
 .profile-pic img {
   width: 180px;
   border-radius: 50%;
@@ -302,6 +422,14 @@ nav a {
 
 .overview{
   text-align: center;
+}
+
+.overview-caption {
+  color: #667085;
+  font-size: 0.92em;
+  line-height: 1.45;
+  margin: 8px auto 0;
+  max-width: 620px;
 }
 
 .band-pic {
@@ -378,6 +506,31 @@ p {
 
 .publication {
   /* margin: 0 0 10px 0; */
+}
+
+.publication a {
+  display: inline-block;
+  color: #6b7ab8;
+  background-color: #f7f8ff;
+  border: 1px solid #dfe5ff;
+  border-radius: 6px;
+  font-size: 0.86em;
+  font-weight: 700;
+  line-height: 1;
+  margin: 5px 4px 0 0;
+  padding: 4px 8px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease, transform 0.18s ease;
+}
+
+.publication a:hover,
+.publication a:focus {
+  color: #a85b86;
+  background-color: #fff1f7;
+  border-color: #ffd7e8;
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .footer {
