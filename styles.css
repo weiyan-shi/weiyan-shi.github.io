@@ -178,11 +178,11 @@ ul {
 .rednote-icon {
   display: block;
   width: auto;
-  height: 85%;
+  height: 95%;
   filter: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.2)
     brightness(0.78);
   opacity: 0.82;
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 .x-icon,
