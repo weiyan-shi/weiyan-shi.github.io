@@ -140,6 +140,14 @@ ul {
   font-weight: 400;
 }
 
+.link-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
 .link-list a {
   display: inline-flex;
   align-items: center;
@@ -148,7 +156,6 @@ ul {
   font-weight: 700;
   text-decoration: none;
   line-height: 1;
-  margin: 8px 12px 0 0;
   width: 32px;
   height: 32px;
   transition: color 0.18s ease, transform 0.18s ease;
