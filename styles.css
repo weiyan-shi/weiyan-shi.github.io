@@ -149,6 +149,8 @@ ul {
   text-decoration: none;
   line-height: 1;
   margin: 8px 12px 0 0;
+  width: 32px;
+  height: 32px;
   transition: color 0.18s ease, transform 0.18s ease;
 }
 
@@ -159,8 +161,21 @@ ul {
 }
 
 .link-list i {
-  font-size: 1.35em;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  font-size: 32px;
   margin: 0;
+}
+
+.rednote-icon {
+  display: block;
+  width: auto;
+  height: 85%;
+  filter: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.2)
+    brightness(0.78);
+  opacity: 0.82;
+  transform: translateY(2px);
 }
 
 .x-icon,
@@ -532,14 +547,6 @@ nav a:focus {
   border-radius: 8px;
   box-shadow: 0 0 12px #4f46e5;
   margin-bottom: 5px;
-}
-
-.rednote-pic {
-  height: auto;
-  width: 300px;
-  border-radius: 8px;
-  /* box-shadow: 0 0 12px #ff1668; */
-  /* margin-bottom: 5px; */
 }
 
 @media (max-width: 768px) {
