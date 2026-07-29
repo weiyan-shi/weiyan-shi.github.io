@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function copyEmail(element) {
-    const email = element ? element.textContent.trim() : "weiyanshi6@gmail.com";
+    const email = element ? element.dataset.email || element.textContent.trim() : "weiyanshi6@gmail.com";
     navigator.clipboard.writeText(email).then(() => {
         alert("Email copied to clipboard!");
     }).catch(err => {
