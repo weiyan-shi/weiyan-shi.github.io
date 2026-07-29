@@ -130,9 +130,6 @@ ul {
   display: inline-block;
   color: #3f6fb5;
   line-height: 1.15;
-  padding: 0 5px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, transparent 48%, #dfeeff 48%);
 }
 
 .chinese-name {
