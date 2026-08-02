@@ -443,6 +443,11 @@ nav a:focus {
   vertical-align: 0;
 }
 
+.icon-after {
+  margin-right: 0;
+  margin-left: 3px;
+}
+
 .human-icon,
 .ai-icon,
 .align-icon,
