@@ -651,7 +651,9 @@ p {
 }
 
 .publication a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: #6b7ab8;
   background-color: #f7f8ff;
   border: 1px solid #dfe5ff;
@@ -664,6 +666,11 @@ p {
   text-decoration: none;
   transition: background-color 0.18s ease, border-color 0.18s ease,
     color 0.18s ease, transform 0.18s ease;
+  vertical-align: middle;
+}
+
+.publication a i {
+  line-height: 1;
 }
 
 .publication a:hover,
