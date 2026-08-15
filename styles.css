@@ -214,11 +214,12 @@ a:not(nav a):not(.link-list a):not(.publication a):not(#email) {
   color: #3f6fb5;
   font-weight: 700;
   line-height: 1.2;
-  padding: 0 3px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, transparent 45%, #dfeeff 45%);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  padding: 0 1px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #b7c3ff;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3px;
 }
 
 a:focus,
@@ -232,17 +233,21 @@ a:hover {
 a:not(nav a):not(.link-list a):not(.publication a):not(#email):hover,
 a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
   color: #2f5ea7;
-  background: linear-gradient(180deg, transparent 38%, #cfe5ff 38%);
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #8fa9ff;
 }
 
 h2 {
   display: inline-block;
   color: #3f6fb5;
   line-height: 1.15;
-  padding: 0 6px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, transparent 48%, #dfeeff 48%);
+  padding: 0 1px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #b7c3ff;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 5px;
 }
 
 .highlight2 {
@@ -327,19 +332,23 @@ nav a:focus {
   font-size: 1em;
   font-weight: 700;
   line-height: 1.2;
-  padding: 0 4px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, transparent 45%, #dfeeff 45%);
+  padding: 0 1px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #b7c3ff;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3px;
   text-shadow: none;
 }
 
 .venue-name {
   display: inline;
   color: #5f6f89;
-  background: linear-gradient(180deg, transparent 60%, #f3f8ff 60%);
-  border-radius: 4px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #d0dcff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .date-tag {
@@ -433,8 +442,23 @@ nav a:focus {
   display: inline;
 }
 
+.research-vision {
+  display: block;
+  margin-top: 4px;
+}
+
 .research-term {
   white-space: nowrap;
+}
+
+.research-keyword {
+  color: #3f6fb5;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #b7c3ff;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 3px;
 }
 
 .research-icon {
@@ -501,7 +525,7 @@ nav a:focus {
   color: #3f6fb5;
   font-size: 1.02em;
   line-height: 1.25;
-  margin: 0 0 9px;
+  margin: 0 0 6px;
 }
 
 .project-title-icon {
@@ -510,8 +534,24 @@ nav a:focus {
   margin-right: 5px;
 }
 
+.project-direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #5d6f9f;
+  font-size: 0.88em;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+
 .project-cluster ul {
   margin: 0;
+}
+
+.project-note {
+  color: #5f6f89;
+  margin: 0 0 10px;
+  line-height: 1.45;
 }
 
 .project-cluster li {
