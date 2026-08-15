@@ -494,6 +494,8 @@ nav a:focus {
 
 .project-cluster {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 300px;
   min-width: 280px;
   padding: 14px 14px 16px;
@@ -545,7 +547,7 @@ nav a:focus {
 }
 
 .project-cluster ul {
-  margin: 0;
+  margin: auto 0 0;
 }
 
 .project-note {
