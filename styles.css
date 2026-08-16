@@ -475,8 +475,27 @@ nav a:focus {
 .human-icon,
 .ai-icon,
 .align-icon,
-.communication-icon {
+.communication-icon,
+.creative-icon,
+.childhood-icon {
   color: #5d6f9f;
+}
+
+.claude-icon {
+  display: inline-block;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  margin-right: 2px;
+  vertical-align: -0.14em;
+  filter: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.2)
+    brightness(0.78);
+  opacity: 0.82;
+}
+
+.claude-icon.icon-after {
+  margin-right: 0;
+  margin-left: 2px;
 }
 
 .profile-pic img {
