@@ -439,7 +439,58 @@ nav a:focus {
 }
 
 .research-interest {
-  display: inline;
+  display: block;
+}
+
+.about-para {
+  margin: 0;
+}
+
+.about-para + .about-para {
+  margin-top: 10px;
+}
+
+.about-para-intro {
+  color: #3f6fb5;
+}
+
+.about-para-future {
+  color: #3f6fb5;
+}
+
+.about-key-1 {
+  color: #7c5cbf;
+  font-weight: 700;
+}
+
+.about-key-2 {
+  color: #1f9c78;
+  font-weight: 700;
+}
+
+.about-key-3 {
+  color: #c2478c;
+  font-weight: 700;
+}
+
+.claude-line-hook {
+  color: #c1633a;
+}
+
+.claude-line-1 {
+  color: #7c5cbf;
+}
+
+.claude-line-2 {
+  color: #1f9c78;
+}
+
+.claude-line-3 {
+  color: #c2478c;
+}
+
+.claude-line-close {
+  color: #3f6fb5;
 }
 
 .research-vision {
@@ -488,9 +539,6 @@ nav a:focus {
   height: 1em;
   margin-right: 2px;
   vertical-align: -0.14em;
-  filter: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.2)
-    brightness(0.78);
-  opacity: 0.82;
 }
 
 .claude-icon.icon-after {
