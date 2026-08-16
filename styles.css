@@ -618,6 +618,10 @@ nav a:focus {
     text-align: left;
   }
 
+  .research-term {
+    white-space: normal;
+  }
+
   .publication-wrapper {
     flex-direction: column;
   }
