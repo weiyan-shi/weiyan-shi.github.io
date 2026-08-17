@@ -142,6 +142,15 @@ ul {
   font-weight: 400;
 }
 
+.pronounce-hint {
+  display: inline-block;
+  color: #8792b0;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.6em;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
 .link-list {
   display: flex;
   align-items: center;
@@ -191,7 +200,8 @@ ul {
 .scholar-icon,
 .orcid-icon,
 .github-icon,
-.linkedin-icon {
+.linkedin-icon,
+.pronunciation-icon {
   color: #5d6f9f;
   margin: 0 2px;
   vertical-align: -1px;
