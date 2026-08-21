@@ -389,6 +389,13 @@ nav a:focus {
 .research-vision {
   display: block;
   margin-top: 4px;
+  font-style: italic;
+  font-weight: 600;
+  color: #5f6f89;
+}
+
+.research-vision + .about-para {
+  margin-top: 14px;
 }
 
 .research-term {
