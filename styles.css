@@ -101,7 +101,7 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
-  color: #42526f;
+  color: #202124;
   max-width: 800px;
   margin: auto;
   line-height: 1.7;
@@ -128,17 +128,19 @@ ul {
 .site-name,
 .chinese-name {
   display: inline-block;
-  color: #3f6fb5;
+  font-size: 28px;
+  font-weight: 400;
   line-height: 1.15;
 }
 
 .site-name {
-  font-family: 'Dancing Script', cursive;
+  color: #2563b8;
+  font-family: inherit;
 }
 
 .chinese-name {
-  font-family: 'Ma Shan Zheng', cursive;
-  font-size: 1.1em;
+  color: #111111;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 400;
 }
 
@@ -147,15 +149,15 @@ ul {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 14px;
 }
 
 .link-list a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #5d6f9f;
-  font-weight: 700;
+  color: #3b3b3b;
+  font-weight: 400;
   text-decoration: none;
   line-height: 1;
   width: 20px;
@@ -164,7 +166,6 @@ ul {
 }
 
 .link-list a:hover {
-  color: #3f6fb5;
   text-decoration: none;
   transform: translateY(-1px) scale(1.08);
 }
@@ -181,9 +182,8 @@ ul {
   display: block;
   width: auto;
   height: 95%;
-  filter: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.2)
-    brightness(0.78);
-  opacity: 0.82;
+  filter: none;
+  opacity: 1;
   transform: translateY(1px);
 }
 
@@ -192,49 +192,72 @@ ul {
 .orcid-icon,
 .github-icon,
 .linkedin-icon {
-  color: #5d6f9f;
   margin: 0 2px;
   vertical-align: -1px;
 }
 
+.x-icon {
+  color: #000000;
+}
+
+.orcid-icon {
+  color: #a6ce39;
+}
+
+.linkedin-icon {
+  color: #0a66c2;
+}
+
+.scholar-icon {
+  color: #4285f4;
+}
+
+.github-icon {
+  color: #24292f;
+}
+
 .pronunciation-icon {
-  color: #3f6fb5;
+  color: #3b3b3b;
   margin: 0 2px;
   vertical-align: -1px;
 }
 
 .pronounce-text {
-  color: #3f6fb5;
-  font-weight: 700;
+  color: #3b3b3b;
+  font-weight: 400;
 }
 
 .contact-icon {
-  color: #5d6f9f;
+  color: #3b3b3b;
   margin-right: 4px;
 }
 
+.contact-line {
+  margin-top: 6px;
+}
+
 a {
-  color: #4682b4;
+  color: #2563b8;
   text-decoration: none;
 }
 
 a:not(nav a):not(.link-list a):not(.publication a):not(#email) {
   display: inline;
-  color: #3f6fb5;
-  font-weight: 600;
+  color: #2563b8;
+  font-weight: 400;
   line-height: 1.2;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #0056b3;
+  color: #174a8b;
   text-decoration: underline;
 }
 
 a:not(nav a):not(.link-list a):not(.publication a):not(#email):hover,
 a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
-  color: #2f5ea7;
+  color: #174a8b;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -242,30 +265,30 @@ a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
 
 h2 {
   display: block;
-  color: #2c3a5e;
-  font-size: 1.08em;
-  font-weight: 700;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 1.2;
   margin: 0 0 14px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #e4e8f5;
+  border-bottom: 1px solid #e6e2dc;
 }
 
 h3 {
-  color: #2c3a5e;
-  font-size: 1em;
-  font-weight: 700;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
   margin: 16px 0 8px;
 }
 
 .copy-email {
-  color: #3f6fb5;
-  border-bottom: 1px solid #c9d6ff;
+  color: #333333;
+  border-bottom: 1px solid #cfc7bd;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.95em;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   cursor: pointer;
   text-decoration: none;
   transition: border-color 0.18s ease, color 0.18s ease;
@@ -273,17 +296,17 @@ h3 {
 
 .copy-email:hover,
 .copy-email:focus {
-  color: #2f5ea7;
-  border-bottom-color: #9db7ff;
+  color: #174a8b;
+  border-bottom-color: #8eb6ea;
   text-decoration: none;
   font-style: normal;
 }
 
 nav a {
   display: inline-block;
-  color: #6677aa;
+  color: #3b3b3b;
   border-bottom: 2px dotted transparent;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0 10px;
   padding-bottom: 2px;
   transition: border-color 0.18s ease, color 0.18s ease;
@@ -291,8 +314,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  color: #3f6fb5;
-  border-bottom-color: #c9d6ff;
+  color: #2563b8;
+  border-bottom-color: #b7d2f5;
   text-decoration: none;
 }
 
@@ -302,7 +325,7 @@ nav a:focus {
 }
 
 .label-icon {
-  color: #5d6f9f;
+  color: #3b3b3b;
   font-size: 0.88em;
   margin-right: 4px;
 }
@@ -322,46 +345,50 @@ nav a:focus {
 
 .name {
   display: inline-block;
-  color: #3f6fb5;
+  color: #2563b8;
   font-family: inherit;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .venue-name {
   display: inline;
-  color: #5f6f89;
+  color: #555555;
   font-style: italic;
 }
 
 .date-tag {
   display: inline-block;
-  color: #8792b0;
+  color: #777777;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-weight: 700;
-  font-size: 0.86em;
+  font-weight: 400;
+  font-size: 12px;
   margin-right: 6px;
 }
 
 .uni {
-  color: #5f6f89;
-  font-weight: 700;
+  color: #333333;
+  font-weight: 400;
 }
 
 .ranka {
-  color: #b5670d;
-  font-weight: 700;
+  color: #d97706;
+  font-weight: 400;
 }
 
 .ads {
-  color: #5f6f89;
-  font-weight: 700;
+  color: #333333;
+  font-weight: 400;
 }
 
 .pp-name {
-  color: #5f6f89;
-  font-weight: 700;
+  color: #333333;
+  font-weight: 400;
+}
+
+.service-role {
+  color: #777777;
 }
 
 .about-content {
@@ -389,9 +416,9 @@ nav a:focus {
 .research-vision {
   display: block;
   margin-top: 4px;
-  font-style: italic;
-  font-weight: 600;
-  color: #5f6f89;
+  font-style: normal;
+  font-weight: 400;
+  color: #d97706;
 }
 
 .research-vision + .about-para {
@@ -399,18 +426,18 @@ nav a:focus {
 }
 
 .research-term {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .research-keyword {
-  color: #3f6fb5;
-  font-weight: 700;
+  color: #111111;
+  font-weight: 400;
 }
 
 .script-name {
   font-family: 'Dancing Script', cursive;
   font-size: 1.05em;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .research-icon {
@@ -447,6 +474,15 @@ nav a:focus {
   border-radius: 50%;
 }
 
+.profile-name-cn {
+  margin-top: 8px;
+  color: #555555;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+}
+
 .project-map {
   display: flex;
   flex-wrap: wrap;
@@ -462,13 +498,14 @@ nav a:focus {
   flex: 1 1 300px;
   min-width: 280px;
   padding: 14px 16px 16px;
-  border: 1px solid #e4e8f5;
+  border: 1px solid #e6e2dc;
   border-radius: 6px;
+  background: #fff;
 }
 
 .project-cluster h3 {
-  color: #3f6fb5;
-  font-size: 1.02em;
+  color: #111111;
+  font-size: 14px;
   line-height: 1.25;
   margin: 0 0 6px;
 }
@@ -477,19 +514,20 @@ nav a:focus {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: #5d6f9f;
-  font-size: 0.88em;
+  color: #3b3b3b;
+  font-size: 12px;
   margin-right: 6px;
   vertical-align: 1px;
 }
 
 .project-cluster ul {
   margin: auto 0 0;
-  font-size: 0.76em;
+  font-size: 12px;
 }
 
 .project-note {
-  color: #5f6f89;
+  color: #3f3f3f;
+  font-size: 14px;
   margin: 0 0 10px;
   line-height: 1.45;
 }
@@ -509,7 +547,7 @@ nav a:focus {
   width: 280px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 12px #4f46e5;
+  box-shadow: 0 6px 18px rgba(32, 33, 36, 0.18);
   margin-bottom: 5px;
 }
 
@@ -564,8 +602,8 @@ nav a:focus {
 }
 
 .papertitle {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .publication-wrapper {
@@ -590,7 +628,7 @@ nav a:focus {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0),
-    rgba(247, 249, 255, 0.92)
+    rgba(255, 255, 255, 0.94)
   );
   pointer-events: none;
 }
@@ -615,7 +653,7 @@ nav a:focus {
 
 .pub-badges .ranka,
 .pub-badges .pp-name {
-  font-size: 0.76em;
+  font-size: 11px;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1px 4px;
   border-radius: 3px;
@@ -629,9 +667,9 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #5d6f9f;
-  font-size: 0.76em;
-  font-weight: 600;
+  color: #2563b8;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 1;
   margin: 8px 12px 0 0;
   text-decoration: none;
@@ -641,7 +679,7 @@ p {
 
 .publication a:hover,
 .publication a:focus {
-  color: #2f5ea7;
+  color: #174a8b;
   text-decoration: underline;
 }
 
@@ -663,8 +701,8 @@ p {
 }
 
 .news-icon {
-  color: #5d6f9f;
-  font-size: 0.88em;
+  color: #3b3b3b;
+  font-size: 12px;
   margin: 0 5px 0 2px;
   width: 1em;
   text-align: center;
