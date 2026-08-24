@@ -388,7 +388,12 @@ nav a:focus {
 }
 
 .service-role {
+  display: inline-block;
   color: #777777;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 6px;
 }
 
 .about-content {
