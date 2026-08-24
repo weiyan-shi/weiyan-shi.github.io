@@ -123,6 +123,7 @@ ul {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 
 .site-name,
@@ -321,7 +322,7 @@ nav a:focus {
 
 .section {
   position: relative;
-  padding: 24px 20px;
+  padding: 20px;
 }
 
 .label-icon {
@@ -475,17 +476,22 @@ nav a:focus {
 }
 
 .profile-pic img {
+  display: block;
   width: 180px;
   border-radius: 50%;
 }
 
 .profile-name-cn {
-  margin-top: 8px;
+  margin-top: 4px;
   color: #555555;
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 1.2;
   text-align: center;
+}
+
+.profile-pic {
+  margin-bottom: 12px;
 }
 
 .project-map {
@@ -558,11 +564,11 @@ nav a:focus {
 
 @media (max-width: 768px) {
   .header {
-    padding-bottom: 6px;
+    padding: 16px 20px 10px;
   }
 
   #about .section {
-    padding-top: 8px;
+    padding-top: 4px;
   }
 
   .about-content {
@@ -573,7 +579,7 @@ nav a:focus {
 
   .profile-pic img {
     width: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 
   .text {
