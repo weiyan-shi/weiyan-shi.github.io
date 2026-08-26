@@ -99,6 +99,8 @@
 }
 
 body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #202124;
@@ -637,6 +639,10 @@ p {
 
 .news-container ul {
   margin: 0;
+}
+
+.news-container li {
+  font-size: inherit;
 }
 
 .news-toggle {
