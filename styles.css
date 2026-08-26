@@ -126,8 +126,7 @@ ul {
   margin: 0;
 }
 
-.site-name,
-.chinese-name {
+.site-name {
   display: inline-block;
   font-size: 28px;
   font-weight: 400;
@@ -137,12 +136,6 @@ ul {
 .site-name {
   color: #2563b8;
   font-family: inherit;
-}
-
-.chinese-name {
-  color: #111111;
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  font-weight: 400;
 }
 
 .link-list {
@@ -191,7 +184,6 @@ ul {
 .x-icon,
 .scholar-icon,
 .orcid-icon,
-.github-icon,
 .linkedin-icon {
   margin: 0 2px;
   vertical-align: -1px;
@@ -211,10 +203,6 @@ ul {
 
 .scholar-icon {
   color: #4285f4;
-}
-
-.github-icon {
-  color: #24292f;
 }
 
 .pronunciation-icon {
@@ -242,7 +230,7 @@ a {
   text-decoration: none;
 }
 
-a:not(nav a):not(.link-list a):not(.publication a):not(#email) {
+a:not(.link-list a):not(.publication a):not(#email) {
   display: inline;
   color: #2563b8;
   font-weight: 400;
@@ -256,8 +244,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a:not(nav a):not(.link-list a):not(.publication a):not(#email):hover,
-a:not(nav a):not(.link-list a):not(.publication a):not(#email):focus {
+a:not(.link-list a):not(.publication a):not(#email):hover,
+a:not(.link-list a):not(.publication a):not(#email):focus {
   color: #174a8b;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -301,23 +289,6 @@ h3 {
   border-bottom-color: #8eb6ea;
   text-decoration: none;
   font-style: normal;
-}
-
-nav a {
-  display: inline-block;
-  color: #3b3b3b;
-  border-bottom: 2px dotted transparent;
-  font-weight: 400;
-  margin: 0 10px;
-  padding-bottom: 2px;
-  transition: border-color 0.18s ease, color 0.18s ease;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #2563b8;
-  border-bottom-color: #b7d2f5;
-  text-decoration: none;
 }
 
 .section {
@@ -419,18 +390,6 @@ nav a:focus {
   margin-top: 10px;
 }
 
-.research-vision {
-  display: block;
-  margin-top: 4px;
-  font-style: normal;
-  font-weight: 400;
-  color: #d97706;
-}
-
-.research-vision + .about-para {
-  margin-top: 14px;
-}
-
 .research-term {
   white-space: normal;
 }
@@ -438,41 +397,6 @@ nav a:focus {
 .research-keyword {
   color: #111111;
   font-weight: 400;
-}
-
-.script-name {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.05em;
-  font-weight: 400;
-}
-
-.research-icon {
-  font-size: 0.88em;
-  margin-right: 3px;
-  vertical-align: 0;
-}
-
-.icon-after {
-  margin-right: 0;
-  margin-left: 3px;
-}
-
-.claude-name {
-  color: #c1633a;
-}
-
-.claude-icon {
-  display: inline-block;
-  font-size: 1em;
-  width: 1em;
-  height: 1em;
-  margin-right: 2px;
-  vertical-align: -0.14em;
-}
-
-.claude-icon.icon-after {
-  margin-right: 0;
-  margin-left: 2px;
 }
 
 .profile-pic img {
@@ -554,14 +478,6 @@ nav a:focus {
   align-items: center;
 }
 
-.band-pic {
-  width: 280px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(32, 33, 36, 0.18);
-  margin-bottom: 5px;
-}
-
 @media (max-width: 768px) {
   .header {
     padding: 16px 20px 10px;
@@ -615,6 +531,10 @@ nav a:focus {
 .papertitle {
   font-size: 14px;
   font-weight: 400;
+}
+
+.publication p:not(.papertitle) {
+  font-size: 12px;
 }
 
 .publication-wrapper {
@@ -702,13 +622,42 @@ p {
 
 .news-container {
   max-height: 220px;
-  overflow-y: auto;
-  /* padding-right: 8px; */
+  overflow: hidden;
+  font-size: 12px;
+  transition: max-height 0.2s ease;
+}
+
+.news-container.is-expanded {
+  max-height: none;
 }
 
 .news-container ul {
   margin: 0;
-  /* padding-left: 20px; */
+}
+
+.news-toggle {
+  display: none;
+  align-items: center;
+  color: #2563b8;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 8px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.news-toggle.is-visible {
+  display: inline-flex;
+}
+
+.news-toggle:hover,
+.news-toggle:focus {
+  color: #174a8b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .news-icon {

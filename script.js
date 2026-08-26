@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = ["header", "about", "overview", "press", "education", "news", "publications", "experience", "awards", "services", "footer"];
 
     sections.forEach(section => {
-        fetch(`components/${section}.html?v=20260825r`)
+        fetch(`components/${section}.html?v=20260826r`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(data => {
                 document.getElementById(section).innerHTML = data;
+                if (section === 'news') {
+                    initNewsToggle();
+                }
                 if (section === 'footer') {
                     const d = new Date(document.lastModified);
                     document.getElementById('last-updated').textContent =
@@ -20,6 +23,22 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error(`Error loading ${section}:`, error));
     });
 });
+
+function initNewsToggle() {
+    const newsList = document.getElementById('news-list');
+    const newsToggle = document.querySelector('.news-toggle');
+
+    if (!newsList || !newsToggle || newsList.scrollHeight <= newsList.clientHeight) {
+        return;
+    }
+
+    newsToggle.classList.add('is-visible');
+    newsToggle.addEventListener('click', () => {
+        const isExpanded = newsList.classList.toggle('is-expanded');
+        newsToggle.setAttribute('aria-expanded', String(isExpanded));
+        newsToggle.textContent = isExpanded ? 'Show less' : 'Show more';
+    });
+}
 
 function copyEmail(element) {
     const email = element ? element.dataset.email || element.textContent.trim() : "weiyanshi6@gmail.com";
