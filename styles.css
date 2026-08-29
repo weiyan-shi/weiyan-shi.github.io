@@ -405,6 +405,13 @@ a .pp-name {
   font-weight: 400;
 }
 
+.research-question {
+  color: #d97706;
+  background: #fff3c4;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
 .profile-pic img {
   display: block;
   width: 180px;
