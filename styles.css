@@ -268,7 +268,7 @@ h2 {
 
 h3 {
   color: #111111;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   margin: 16px 0 8px;
 }
@@ -277,7 +277,7 @@ h3 {
   color: #333333;
   border-bottom: 1px solid #cfc7bd;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
@@ -309,6 +309,7 @@ h3 {
 }
 
 .section ul li {
+  font-size: 12px;
   margin: 0 0 10px;
   line-height: 1.6;
 }
@@ -389,6 +390,7 @@ a .pp-name {
 }
 
 .about-para {
+  font-size: 12px;
   margin: 0;
 }
 
@@ -407,14 +409,14 @@ a .pp-name {
 
 .research-question {
   color: #d97706;
-  background: #fff3c4;
-  border-radius: 3px;
-  padding: 0 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.95em;
+  text-decoration: none;
 }
 
 .profile-pic img {
   display: block;
-  width: 180px;
+  width: 150px;
   border-radius: 50%;
 }
 
@@ -453,7 +455,7 @@ a .pp-name {
 
 .project-cluster h3 {
   color: #111111;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.25;
   margin: 0 0 6px;
 }
@@ -475,7 +477,7 @@ a .pp-name {
 
 .project-note {
   color: #3f3f3f;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 0 10px;
   line-height: 1.45;
 }
@@ -507,7 +509,7 @@ a .pp-name {
   }
 
   .profile-pic img {
-    width: 120px;
+    width: 100px;
     margin-bottom: 0;
   }
 
@@ -542,8 +544,8 @@ a .pp-name {
 }
 
 .papertitle {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .publication p:not(.papertitle) {
@@ -585,14 +587,21 @@ a .pp-name {
 
 .pub-badges {
   position: absolute;
+  top: 6px;
   left: 6px;
   right: 6px;
   bottom: 6px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 4px;
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
   z-index: 1;
+}
+
+.pub-venue {
+  margin-top: auto;
 }
 
 .pub-badges .ranka,
