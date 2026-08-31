@@ -268,7 +268,7 @@ h2 {
 
 h3 {
   color: #111111;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin: 16px 0 8px;
 }
@@ -277,7 +277,7 @@ h3 {
   color: #333333;
   border-bottom: 1px solid #cfc7bd;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   cursor: pointer;
@@ -309,7 +309,7 @@ h3 {
 }
 
 .section ul li {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 0 10px;
   line-height: 1.6;
 }
@@ -338,7 +338,7 @@ h3 {
   color: #777777;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 6px;
 }
 
@@ -370,7 +370,7 @@ a .pp-name {
   display: inline-block;
   color: #777777;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin-right: 6px;
 }
@@ -390,7 +390,7 @@ a .pp-name {
 }
 
 .about-para {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -455,7 +455,7 @@ a .pp-name {
 
 .project-cluster h3 {
   color: #111111;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.25;
   margin: 0 0 6px;
 }
@@ -465,19 +465,19 @@ a .pp-name {
   align-items: center;
   gap: 5px;
   color: #3b3b3b;
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 6px;
   vertical-align: 1px;
 }
 
 .project-cluster ul {
   margin: auto 0 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .project-note {
   color: #3f3f3f;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 0 10px;
   line-height: 1.45;
 }
@@ -541,15 +541,16 @@ a .pp-name {
   .project-cluster {
     min-width: 0;
   }
+
 }
 
 .papertitle {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .publication p:not(.papertitle) {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .publication-wrapper {
@@ -621,7 +622,7 @@ p {
   align-items: center;
   gap: 4px;
   color: #2563b8;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1;
   margin: 8px 12px 0 0;
@@ -645,7 +646,7 @@ p {
 .news-container {
   max-height: 220px;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 14px;
   transition: max-height 0.2s ease;
 }
 
@@ -668,7 +669,7 @@ p {
   border: 0;
   background: transparent;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   margin: 8px 0 0;
   padding: 0;
@@ -688,8 +689,29 @@ p {
 
 .news-icon {
   color: #3b3b3b;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 5px 0 2px;
   width: 1em;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  h3,
+  .copy-email,
+  .section ul li,
+  .date-tag,
+  .service-role,
+  .about-para,
+  .project-cluster h3,
+  .project-direction,
+  .project-cluster ul,
+  .project-note,
+  .papertitle,
+  .publication p:not(.papertitle),
+  .publication a,
+  .news-container,
+  .news-toggle,
+  .news-icon {
+    font-size: 12px;
+  }
 }
