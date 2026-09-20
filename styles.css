@@ -446,6 +446,8 @@ a .pp-name {
 }
 
 .project-cluster {
+  color: inherit;
+  text-decoration: none;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -455,6 +457,18 @@ a .pp-name {
   border: 1px solid #e6e2dc;
   border-radius: 6px;
   background: #fff;
+}
+
+.project-cluster:hover {
+  color: inherit;
+  text-decoration: none;
+  border-color: #d97706;
+  background: #fffaf3;
+}
+
+.project-cluster:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 3px;
 }
 
 .project-cluster h3 {
