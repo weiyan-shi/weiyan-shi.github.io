@@ -407,6 +407,10 @@ a .pp-name {
   font-weight: 400;
 }
 
+.translator-highlight {
+  color: #d97706;
+}
+
 .research-question {
   color: #d97706;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
