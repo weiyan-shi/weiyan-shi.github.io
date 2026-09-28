@@ -377,7 +377,7 @@ a .pp-name {
 
 .about-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .text {
@@ -434,6 +434,7 @@ a .pp-name {
 }
 
 .profile-pic {
+  margin-top: 32px;
   margin-bottom: 12px;
 }
 
@@ -511,6 +512,10 @@ a .pp-name {
   align-items: center;
 }
 
+.project-cluster .pp-name {
+  color: #333333;
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 40px 20px 18px;
@@ -524,6 +529,10 @@ a .pp-name {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+  }
+
+  .profile-pic {
+    margin-top: 0;
   }
 
   .profile-pic img {
@@ -602,6 +611,7 @@ a .pp-name {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 .pub-badges {
@@ -629,6 +639,16 @@ a .pp-name {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1px 4px;
   border-radius: 3px;
+}
+
+.pub-badges .ranka {
+  background-color: #fff;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  padding: 4px 6px;
+  font-weight: 600;
+  line-height: 1.35;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
 
 p {
