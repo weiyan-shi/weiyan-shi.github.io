@@ -411,6 +411,10 @@ a .pp-name {
   color: #d97706;
 }
 
+.professional-highlight {
+  color: #e65c3a;
+}
+
 .research-question {
   color: #d97706;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
