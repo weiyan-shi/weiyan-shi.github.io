@@ -584,6 +584,21 @@ a .pp-name {
   font-size: 14px;
 }
 
+.publication-group + .publication-group {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e6e2dc;
+}
+
+.publication-group > h3 {
+  margin: 0 0 18px;
+  color: #555555;
+}
+
+.publication-group > .publication-wrapper:last-child {
+  margin-bottom: 0;
+}
+
 .publication-wrapper {
   display: flex;
   align-items: flex-start;
