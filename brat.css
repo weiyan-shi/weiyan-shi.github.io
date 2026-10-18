@@ -66,6 +66,19 @@ html:has(body.brat) {
 .brat .link-list a { width: auto; }
 .brat .link-list a, .brat .link-list a i { color: #111; }
 .brat .link-list a:hover { transform: translateY(-2px); }
+.brat .link-list a.follow-x {
+  flex: none;
+  height: 32px;
+  padding: 0 10px;
+  gap: 7px;
+  background: #111;
+  color: #8ace00;
+  font-size: 12px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.brat .link-list a.follow-x .x-icon { color: inherit; font-size: 15px; margin: 0; }
+.brat .link-list a.follow-x:focus-visible { outline-color: #111; transform: translateY(-2px); }
 .brat .link-list a[aria-label="RedNote"] { background: transparent; padding: 0; width: 32px; }
 .brat .social-note { background: #111; color: #8ace00; border: 0; border-radius: 0; padding: 17px 20px; margin-top: 16px; }
 .brat .social-note-intro { color: #8ace00; }
@@ -151,6 +164,10 @@ html:has(body.brat) {
 @media (prefers-reduced-motion: reduce) {
   html:has(body.brat) { scroll-behavior: auto; }
   .brat * { transition: none; }
+}
+@media (max-width: 380px) {
+  .brat .link-list { gap: 10px; }
+  .brat .link-list a.follow-x { padding: 0 7px; gap: 6px; }
 }
 
 .brat .external-arrow { display: inline-block; width: 0.9em; height: 0.9em; vertical-align: -0.08em; }
