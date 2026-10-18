@@ -1,28 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = ["header", "about", "overview", "press", "education", "news", "publications", "experience", "awards", "services", "footer"];
-
-    sections.forEach(section => {
-        fetch(`components/${section}.html?v=20261018arrows`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById(section).innerHTML = data;
-                if (section === 'news') {
-                    initNewsToggle();
-                }
-                if (section === 'footer') {
-                    const d = new Date(document.lastModified);
-                    document.getElementById('last-updated').textContent =
-                        d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) + '.';
-                }
-            })
-            .catch(error => console.error(`Error loading ${section}:`, error));
-    });
-});
+document.addEventListener("DOMContentLoaded", initNewsToggle);
 
 function initNewsToggle() {
     const newsList = document.getElementById('news-list');
