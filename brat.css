@@ -68,9 +68,10 @@ html:has(body.brat) {
 .brat .link-list a:hover { transform: translateY(-2px); }
 .brat .link-list a.follow-x {
   flex: none;
-  height: 36px;
-  padding: 0 10px;
-  gap: 7px;
+  height: 28px;
+  padding: 0 9px;
+  gap: 6px;
+  border-radius: 999px;
   background: #111;
   color: #8ace00;
   font-size: 14px;
