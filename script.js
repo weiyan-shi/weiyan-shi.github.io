@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = ["header", "about", "overview", "press", "education", "news", "publications", "experience", "awards", "services", "footer"];
 
     sections.forEach(section => {
-        fetch(`components/${section}.html?v=20261017l`)
+        fetch(`components/${section}.html?v=20261018a`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
