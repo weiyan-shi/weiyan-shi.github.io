@@ -1,4 +1,11 @@
 /* Brat-inspired homepage theme. */
+@font-face {
+  font-family: 'Mansalva';
+  src: url('fonts/mansalva/Mansalva-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 html:has(body.brat) {
   background: #8ace00;
   scroll-behavior: smooth;
@@ -83,7 +90,8 @@ html:has(body.brat) {
 .brat .link-list a[aria-label="RedNote"] { background: transparent; padding: 0; width: 32px; }
 .brat .social-note { background: #111; color: #8ace00; border: 0; border-radius: 12px; padding: 17px 20px; margin-top: 16px; }
 .brat .social-note-intro { color: #8ace00; }
-.brat .social-handle { color: #8ace00; font-size: 20px; font-weight: 400; letter-spacing: -0.04em; }
+.brat .social-handle { color: #8ace00; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
+.brat .cockroach-icon { display: inline-block; width: 26px; height: 29px; vertical-align: -8px; margin-left: 3px; object-fit: contain; transform: rotate(-20deg); }
 .brat .social-icon-link { color: #8ace00; }
 .brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) { color: #111; transform: translateY(-2px); }
 .brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) .x-icon { color: inherit; }
