@@ -55,6 +55,7 @@ html:has(body.brat) {
 .brat .project-note, .brat .project-cluster .pp-name,
 .brat .pronounce-text, .brat .contact-icon, .brat .pronunciation-icon,
 .brat .label-icon, .brat .news-icon, .brat .publication-group > h3 { color: #111; }
+.brat a .pp-name { color: inherit; }
 .brat .professional-highlight, .brat .translator-highlight, .brat .research-question { color: #111; font-weight: 700; }
 .brat a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link),
 .brat .publication a, .brat .copy-email, .brat .news-toggle {
