@@ -152,3 +152,5 @@ html:has(body.brat) {
   html:has(body.brat) { scroll-behavior: auto; }
   .brat * { transition: none; }
 }
+
+.brat .external-arrow { display: inline-block; width: 0.9em; height: 0.9em; vertical-align: -0.08em; }
