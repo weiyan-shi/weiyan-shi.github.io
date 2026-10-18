@@ -101,6 +101,8 @@
 body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Keep the homepage's lowercase treatment consistent across loaded sections. */
+  text-transform: lowercase;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #202124;
@@ -172,15 +174,25 @@ ul {
   height: 100%;
   font-size: 20px;
   margin: 0;
+  color: inherit;
+  transition: color 0.18s ease;
 }
 
 .rednote-icon {
   display: block;
   width: auto;
   height: 95%;
-  filter: none;
+  filter: grayscale(1) brightness(0.65);
   opacity: 1;
   transform: translateY(1px);
+  transition: filter 0.18s ease;
+}
+
+.link-list a:hover .rednote-icon,
+.link-list a:focus-visible .rednote-icon,
+.social-icon-link:hover .rednote-icon,
+.social-icon-link:focus-visible .rednote-icon {
+  filter: none;
 }
 
 .x-icon,
@@ -191,19 +203,23 @@ ul {
   vertical-align: -1px;
 }
 
-.x-icon {
+.link-list a:hover .x-icon,
+.link-list a:focus-visible .x-icon {
   color: #000000;
 }
 
-.orcid-icon {
+.link-list a:hover .orcid-icon,
+.link-list a:focus-visible .orcid-icon {
   color: #a6ce39;
 }
 
-.linkedin-icon {
+.link-list a:hover .linkedin-icon,
+.link-list a:focus-visible .linkedin-icon {
   color: #0a66c2;
 }
 
-.scholar-icon {
+.link-list a:hover .scholar-icon,
+.link-list a:focus-visible .scholar-icon {
   color: #4285f4;
 }
 
@@ -227,12 +243,59 @@ ul {
   margin-top: 6px;
 }
 
+.social-note {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #efe2cf;
+  border-radius: 12px;
+  background: #fff8ed;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-note p + p {
+  margin-top: 5px;
+}
+
+.social-note-intro {
+  color: #6f512f;
+}
+
+.social-handle {
+  color: #a86416;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: -0.2em;
+  color: #3b3b3b;
+  line-height: 1;
+}
+
+.social-icon-link .x-icon {
+  margin: 0;
+  font-size: 1.15em;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus-visible {
+  color: #000000;
+  text-decoration: none;
+}
+
 a {
   color: #2563b8;
   text-decoration: none;
 }
 
-a:not(.link-list a):not(.publication a):not(#email) {
+a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link) {
   display: inline;
   color: #2563b8;
   font-weight: 400;
@@ -246,8 +309,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a:not(.link-list a):not(.publication a):not(#email):hover,
-a:not(.link-list a):not(.publication a):not(#email):focus {
+a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link):hover,
+a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link):focus {
   color: #174a8b;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -348,7 +411,7 @@ h3 {
 }
 
 .ranka {
-  color: #d97706;
+  color: #a86416;
   font-weight: 400;
 }
 
@@ -408,15 +471,15 @@ a .pp-name {
 }
 
 .translator-highlight {
-  color: #d97706;
+  color: #a86416;
 }
 
 .professional-highlight {
-  color: #d97706;
+  color: #a86416;
 }
 
 .research-question {
-  color: #d97706;
+  color: #a86416;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.95em;
   text-decoration: none;
@@ -467,12 +530,12 @@ a .pp-name {
 .project-cluster:hover {
   color: inherit;
   text-decoration: none;
-  border-color: #d97706;
+  border-color: #a86416;
   background: #fffaf3;
 }
 
 .project-cluster:focus-visible {
-  outline: 2px solid #d97706;
+  outline: 2px solid #a86416;
   outline-offset: 3px;
 }
 
@@ -720,6 +783,7 @@ p {
 }
 
 .news-toggle {
+  text-transform: inherit;
   display: none;
   align-items: center;
   color: #2563b8;
@@ -755,6 +819,7 @@ p {
 @media (max-width: 768px) {
   h3,
   .copy-email,
+  .social-note,
   .section ul li,
   .date-tag,
   .service-role,
