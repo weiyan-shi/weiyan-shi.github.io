@@ -3,4 +3,4 @@ Source: https://github.com/lucide-icons/lucide/blob/main/icons/apple.svg
 Changes: brat-green fill (#8ace00), dark outline, PNG and Apple touch exports.
 
 cockroach.svg is an original vector illustration created for this site.
-The cockroach favicon uses the same illustration with a black body and brat-green back details on a transparent background, with 48px and 180px PNG exports.
+The cockroach favicon uses the same illustration with a black body and white back details on a transparent background, with 48px and 180px PNG exports.

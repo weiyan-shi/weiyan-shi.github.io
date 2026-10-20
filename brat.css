@@ -1,4 +1,4 @@
-/* Brat-inspired homepage theme. */
+/* Inspired by the black-and-white Brat deluxe edition cover. */
 @font-face {
   font-family: 'Mansalva';
   src: url('fonts/mansalva/Mansalva-Regular.ttf') format('truetype');
@@ -7,13 +7,13 @@
   font-display: swap;
 }
 html:has(body.brat) {
-  background: #8ace00;
+  background: #fff;
   scroll-behavior: smooth;
 }
 .brat {
-  --green: #8ace00;
+  --paper: #fff;
   --ink: #111;
-  background: var(--green);
+  background: var(--paper);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   max-width: 960px;
@@ -22,11 +22,12 @@ html:has(body.brat) {
   font-size: 15px;
   line-height: 1.6;
 }
-.brat ::selection { background: #111; color: #8ace00; }
+.brat ::selection { background: #111; color: #fff; }
 .brat .header { padding: 24px 0 34px; text-align: left; }
 .brat-meta { display: flex; justify-content: space-between; gap: 20px; font-size: 13px; }
 .brat-meta nav { display: flex; gap: 24px; }
 .brat .mobile-profile { display: none; }
+.brat .profile-pic img, .brat .mobile-profile { filter: grayscale(1) contrast(1.45); }
 .brat .site-title { display: block; margin: 48px 0 10px; }
 .brat .site-name {
   color: var(--ink);
@@ -34,7 +35,7 @@ html:has(body.brat) {
   font-size: clamp(64px, 11.5vw, 144px);
   line-height: 0.95;
   font-weight: 400;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.035em;
   transform: scaleX(1.035);
   transform-origin: left center;
   filter: blur(0.45px);
@@ -47,7 +48,7 @@ html:has(body.brat) {
 .brat .about-para { font-size: 15px; }
 .brat .about-para + .about-para { margin-top: 14px; }
 .brat .profile-pic { margin: 0; flex: 0 0 182px; }
-.brat .profile-pic img { width: 182px; height: 218px; object-fit: cover; border-radius: 0; border: 1px solid #111; }
+.brat .profile-pic img { width: 182px; height: 218px; object-fit: cover; border-radius: 0; border: 0; }
 .brat h2 { color: #111; font-size: 29px; font-weight: 400; letter-spacing: -0.055em; border-bottom: 1px solid #111; padding-bottom: 12px; margin-bottom: 18px; }
 .brat h3 { color: #111; }
 .brat .name, .brat .venue-name, .brat .date-tag, .brat .service-role,
@@ -64,15 +65,16 @@ html:has(body.brat) {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
-.brat a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link):hover,
-.brat .publication a:hover, .brat .copy-email:hover, .brat .news-toggle:hover {
-  color: #8ace00;
+.brat a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link):is(:hover, :focus-visible),
+.brat .publication a:is(:hover, :focus-visible), .brat .copy-email:is(:hover, :focus-visible), .brat .news-toggle:is(:hover, :focus-visible) {
+  color: #fff;
   background: #111;
 }
 .brat a:focus-visible, .brat button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .brat .link-list { margin-top: 22px; gap: 16px; }
 .brat .link-list a { width: auto; }
 .brat .link-list a, .brat .link-list a i { color: #111; }
+.brat .link-list a:is(:hover, :focus-visible) i { color: inherit; }
 .brat .link-list a:hover { transform: translateY(-2px); }
 .brat .link-list a.follow-x {
   flex: none;
@@ -81,7 +83,7 @@ html:has(body.brat) {
   gap: 6px;
   border-radius: 999px;
   background: #111;
-  color: #8ace00;
+  color: #fff;
   font-size: 14px;
   white-space: nowrap;
   text-decoration: none;
@@ -89,15 +91,15 @@ html:has(body.brat) {
 .brat .link-list a.follow-x .x-icon { color: inherit; font-size: 18px; margin: 0; }
 .brat .link-list a.follow-x:focus-visible { outline-color: #111; transform: translateY(-2px); }
 .brat .link-list a[aria-label="RedNote"] { background: transparent; padding: 0; width: 32px; }
-.brat .social-note { background: #111; color: #8ace00; border: 0; border-radius: 12px; padding: 17px 20px; margin-top: 16px; }
-.brat .social-note-intro { color: #8ace00; }
-.brat .social-handle { color: #8ace00; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
+.brat .social-note { background: #111; color: #fff; border: 0; border-radius: 12px; padding: 17px 20px; margin-top: 16px; }
+.brat .social-note-intro { color: #fff; }
+.brat .social-handle { color: #fff; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
 .brat .cockroach-icon { display: inline-block; width: 26px; height: 29px; vertical-align: -8px; margin-left: 3px; object-fit: contain; transform: rotate(-20deg); }
-.brat .social-icon-link { color: #8ace00; }
+.brat .social-icon-link { color: #fff; }
 .brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) { color: #111; transform: translateY(-2px); }
 .brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) .x-icon { color: inherit; }
 .brat .social-icon-link[aria-label="X"] { transition: transform 0.18s ease; }
-.brat .social-icon-link[aria-label="X"]:is(:hover, :focus-visible) { color: #8ace00; transform: translateY(-2px); }
+.brat .social-icon-link[aria-label="X"]:is(:hover, :focus-visible) { color: #fff; transform: translateY(-2px); }
 .brat .rednote-mark {
   display: block;
   flex: none;
@@ -109,8 +111,8 @@ html:has(body.brat) {
   mask: url("images/icons/xiaohongshu.svg") center / contain no-repeat;
 }
 .brat .social-icon-link[aria-label="RedNote 小红书"] { width: 32px; }
-.brat .link-list a[aria-label="RedNote"]:is(:hover, :focus-visible),
-.brat .social-icon-link[aria-label="RedNote 小红书"]:is(:hover, :focus-visible) { color: #ff2442; }
+.brat .link-list a[aria-label="RedNote"]:is(:hover, :focus-visible) { color: var(--ink); }
+.brat .social-icon-link[aria-label="RedNote 小红书"]:is(:hover, :focus-visible) { color: var(--paper); transform: translateY(-2px); }
 .brat .contact-line { margin-top: 14px; }
 .brat .copy-email { border-bottom: 0; }
 .brat .project-map { gap: 0; border: 1px solid #111; }
@@ -129,7 +131,7 @@ html:has(body.brat) {
 .brat a.project-cluster + a.project-cluster { border-left: 1px solid #111 !important; }
 .brat .project-cluster h3 { font-size: 20px; font-weight: 400; letter-spacing: -0.04em; margin-bottom: 12px; }
 .brat a.project-cluster:hover { box-shadow: inset 0 -5px #111; }
-.brat .ranka { display: inline-block; border-radius: 4px; background: #111; color: #8ace00; padding: 1px 5px; white-space: nowrap; }
+.brat .ranka { display: inline-block; border-radius: 4px; background: #111; color: #fff; padding: 1px 5px; white-space: nowrap; }
 .brat .ranka .label-icon { color: inherit; }
 .brat #press li { display: grid; grid-template-columns: 76px 190px minmax(0, 1fr); gap: 12px; align-items: baseline; margin-bottom: 18px; }
 .brat #press .date-tag, .brat #press .ads { margin: 0; white-space: nowrap; }
@@ -145,7 +147,7 @@ html:has(body.brat) {
 .brat .pub-visual { flex: 0 0 240px; width: 240px; height: 160px; margin: 0; border: 1px solid #111; box-sizing: border-box; background: #fff; }
 .brat .conf-logo { width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
 .brat .pub-badges { position: absolute; margin-top: 0; }
-.brat .pub-badges .ranka, .brat .pub-badges .pp-name { background: #111; color: #8ace00; border: 0; border-radius: 4px; box-shadow: none; padding: 3px 5px; white-space: nowrap; }
+.brat .pub-badges .ranka, .brat .pub-badges .pp-name { background: #111; color: #fff; border: 0; border-radius: 4px; box-shadow: none; padding: 3px 5px; white-space: nowrap; }
 .brat .publication { min-width: 0; }
 .brat .publication a { white-space: nowrap; }
 .brat .papertitle { font-size: 17px; line-height: 1.35; margin-bottom: 8px; }
@@ -156,7 +158,7 @@ html:has(body.brat) {
   .brat .brat-hero { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 36px 0 16px; }
   .brat .site-title { margin: 0; min-width: 0; }
   .brat .site-name { font-size: clamp(40px, 12vw, 76px); white-space: nowrap; transform: none; }
-  .brat .mobile-profile { display: block; flex: none; width: clamp(72px, 22vw, 120px); aspect-ratio: 5 / 6; object-fit: cover; border: 1px solid #111; box-sizing: border-box; }
+  .brat .mobile-profile { display: block; flex: none; width: clamp(72px, 22vw, 120px); aspect-ratio: 5 / 6; object-fit: cover; border: 0; box-sizing: border-box; }
   .brat .about-content { flex-direction: column; gap: 22px; align-items: stretch; text-align: left; }
   .brat .profile-pic { display: none; }
   .brat .about-para, .brat .social-note, .brat .section ul li,
