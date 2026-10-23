@@ -1,4 +1,4 @@
-/* Inspired by the black-and-white Brat deluxe edition cover. */
+/* Pale-blue homepage theme. */
 @font-face {
   font-family: 'Mansalva';
   src: url('fonts/mansalva/Mansalva-Regular.ttf') format('truetype');
@@ -7,12 +7,15 @@
   font-display: swap;
 }
 html:has(body.brat) {
-  background: #fff;
+  background: #f5f9ff;
   scroll-behavior: smooth;
 }
 .brat {
-  --paper: #fff;
-  --ink: #111;
+  --paper: #f5f9ff;
+  --ink: #27445d;
+  --accent: #386c98;
+  --line: #c5d7e9;
+  --panel: #e3effc;
   background: var(--paper);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
@@ -22,17 +25,17 @@ html:has(body.brat) {
   font-size: 15px;
   line-height: 1.6;
 }
-.brat ::selection { background: #111; color: #fff; }
+.brat ::selection { background: var(--accent); color: #fff; }
 .brat .header { padding: 24px 0 34px; text-align: left; }
 .brat-meta { display: flex; justify-content: space-between; gap: 20px; font-size: 13px; }
 .brat-meta nav { display: flex; gap: 24px; }
 .brat .mobile-profile { display: none; }
-.brat .profile-pic img, .brat .mobile-profile { filter: grayscale(1) contrast(1.45); }
+.brat .profile-pic img, .brat .mobile-profile { filter: none; border-radius: 12px; }
 .brat .site-title { display: block; margin: 48px 0 10px; }
 .brat .site-name {
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(64px, 11.5vw, 144px);
+  font-size: clamp(32px, 5.75vw, 72px);
   line-height: 0.95;
   font-weight: 400;
   letter-spacing: -0.035em;
@@ -42,25 +45,25 @@ html:has(body.brat) {
 }
 .brat-tagline { font-size: clamp(22px, 3vw, 32px); letter-spacing: -0.04em; }
 .brat .section { padding: 28px 0; }
-.brat #about .section { border-top: 1px solid var(--ink); }
+.brat #about .section { border-top: 1px solid var(--line); }
 .brat .about-content { gap: 36px; }
 .brat .text { margin: 0; min-width: 0; }
 .brat .about-para { font-size: 15px; }
 .brat .about-para + .about-para { margin-top: 14px; }
 .brat .profile-pic { margin: 0; flex: 0 0 182px; }
-.brat .profile-pic img { width: 182px; height: 218px; object-fit: cover; border-radius: 0; border: 0; }
-.brat h2 { color: #111; font-size: 29px; font-weight: 400; letter-spacing: -0.055em; border-bottom: 1px solid #111; padding-bottom: 12px; margin-bottom: 18px; }
-.brat h3 { color: #111; }
+.brat .profile-pic img { width: 182px; height: 218px; object-fit: cover; border-radius: 12px; border: 0; }
+.brat h2 { color: var(--ink); font-size: 29px; font-weight: 400; letter-spacing: -0.055em; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 18px; }
+.brat h3 { color: var(--ink); }
 .brat .name, .brat .venue-name, .brat .date-tag, .brat .service-role,
 .brat .uni, .brat .ads, .brat .pp-name, .brat .project-direction,
 .brat .project-note, .brat .project-cluster .pp-name,
 .brat .pronounce-text, .brat .contact-icon, .brat .pronunciation-icon,
-.brat .label-icon, .brat .news-icon, .brat .publication-group > h3 { color: #111; }
+.brat .label-icon, .brat .news-icon, .brat .publication-group > h3 { color: var(--ink); }
 .brat a .pp-name { color: inherit; }
-.brat .professional-highlight, .brat .translator-highlight, .brat .research-question { color: #111; font-weight: 700; }
+.brat .professional-highlight, .brat .translator-highlight, .brat .research-question { color: var(--ink); font-weight: 700; }
 .brat a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link),
 .brat .publication a, .brat .copy-email, .brat .news-toggle {
-  color: #111;
+  color: var(--ink);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -68,12 +71,12 @@ html:has(body.brat) {
 .brat a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link):is(:hover, :focus-visible),
 .brat .publication a:is(:hover, :focus-visible), .brat .copy-email:is(:hover, :focus-visible), .brat .news-toggle:is(:hover, :focus-visible) {
   color: #fff;
-  background: #111;
+  background: var(--accent);
 }
 .brat a:focus-visible, .brat button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .brat .link-list { margin-top: 22px; gap: 16px; }
 .brat .link-list a { width: auto; }
-.brat .link-list a, .brat .link-list a i { color: #111; }
+.brat .link-list a, .brat .link-list a i { color: var(--ink); }
 .brat .link-list a:is(:hover, :focus-visible) i { color: inherit; }
 .brat .link-list a:hover { transform: translateY(-2px); }
 .brat .link-list a.follow-x {
@@ -82,24 +85,43 @@ html:has(body.brat) {
   padding: 0 9px;
   gap: 6px;
   border-radius: 999px;
-  background: #111;
+  background: var(--accent);
   color: #fff;
   font-size: 14px;
   white-space: nowrap;
   text-decoration: none;
 }
 .brat .link-list a.follow-x .x-icon { color: inherit; font-size: 18px; margin: 0; }
-.brat .link-list a.follow-x:focus-visible { outline-color: #111; transform: translateY(-2px); }
+.brat .link-list a.follow-x:focus-visible { outline-color: var(--ink); transform: translateY(-2px); }
 .brat .link-list a[aria-label="RedNote"] { background: transparent; padding: 0; width: 32px; }
-.brat .social-note { background: #111; color: #fff; border: 0; border-radius: 12px; padding: 17px 20px; margin-top: 16px; }
-.brat .social-note-intro { color: #fff; }
-.brat .social-handle { color: #fff; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
+.brat .social-note {
+  position: relative;
+  background: var(--panel);
+  color: var(--ink);
+  border: 0;
+  border-radius: 0;
+  padding: 18px 20px;
+  margin: 28px 0 12px;
+}
+.brat .social-note::before, .brat .social-note::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 Q30 -4 60 6 T120 6 V12 H0 Z' fill='%23e3effc'/%3E%3C/svg%3E") repeat-x left bottom / 120px 12px;
+  pointer-events: none;
+}
+.brat .social-note::before { top: -11px; }
+.brat .social-note::after { bottom: -11px; transform: rotate(180deg); }
+.brat .social-note-intro { color: inherit; }
+.brat .social-handle { color: inherit; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
 .brat .cockroach-icon { display: inline-block; width: 26px; height: 29px; vertical-align: -8px; margin-left: 3px; object-fit: contain; transform: rotate(-20deg); }
-.brat .social-icon-link { color: #fff; }
-.brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) { color: #111; transform: translateY(-2px); }
+.brat .social-icon-link { color: var(--ink); }
+.brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) { color: var(--ink); transform: translateY(-2px); }
 .brat .link-list a[aria-label="X"]:is(:hover, :focus-visible) .x-icon { color: inherit; }
 .brat .social-icon-link[aria-label="X"] { transition: transform 0.18s ease; }
-.brat .social-icon-link[aria-label="X"]:is(:hover, :focus-visible) { color: #fff; transform: translateY(-2px); }
+.brat .social-icon-link[aria-label="X"]:is(:hover, :focus-visible) { color: var(--ink); transform: translateY(-2px); }
 .brat .rednote-mark {
   display: block;
   flex: none;
@@ -112,13 +134,13 @@ html:has(body.brat) {
 }
 .brat .social-icon-link[aria-label="RedNote 小红书"] { width: 32px; }
 .brat .link-list a[aria-label="RedNote"]:is(:hover, :focus-visible) { color: var(--ink); }
-.brat .social-icon-link[aria-label="RedNote 小红书"]:is(:hover, :focus-visible) { color: var(--paper); transform: translateY(-2px); }
+.brat .social-icon-link[aria-label="RedNote 小红书"]:is(:hover, :focus-visible) { color: var(--ink); transform: translateY(-2px); }
 .brat .contact-line { margin-top: 14px; }
 .brat .copy-email { border-bottom: 0; }
-.brat .project-map { gap: 0; border: 1px solid #111; }
+.brat .project-map { gap: 0; border: 1px solid var(--line); }
 .brat a.project-cluster:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link) {
   display: flex;
-  color: #111;
+  color: var(--ink);
   background: transparent;
   text-decoration: none;
   border: 0;
@@ -128,11 +150,15 @@ html:has(body.brat) {
   min-width: 0;
   line-height: 1.6;
 }
-.brat a.project-cluster + a.project-cluster { border-left: 1px solid #111 !important; }
+.brat a.project-cluster + a.project-cluster { border-left: 1px solid var(--line) !important; }
 .brat .project-cluster h3 { font-size: 20px; font-weight: 400; letter-spacing: -0.04em; margin-bottom: 12px; }
-.brat a.project-cluster:hover { box-shadow: inset 0 -5px #111; }
-.brat .ranka { display: inline-block; border-radius: 4px; background: #111; color: #fff; padding: 1px 5px; white-space: nowrap; }
+.brat a.project-cluster:hover { box-shadow: inset 0 -5px var(--ink); }
+.brat .ranka { display: inline; border: 0; border-radius: 0; background: transparent; color: inherit; padding: 0; white-space: normal; }
 .brat .ranka .label-icon { color: inherit; }
+.brat .ranka .fa-trophy {
+  color: #3688c6;
+  text-shadow: 0 0 3px #b6e5ff, 0 0 8px rgb(91 187 255 / 70%);
+}
 .brat #press li { display: grid; grid-template-columns: 76px 190px minmax(0, 1fr); gap: 12px; align-items: baseline; margin-bottom: 18px; }
 .brat #press .date-tag, .brat #press .ads { margin: 0; white-space: nowrap; }
 .brat #press li a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link) {
@@ -142,30 +168,34 @@ html:has(body.brat) {
   min-width: 0;
   line-height: 1.6;
 }
-.brat .publication-group + .publication-group { border-color: #111; }
-.brat .publication-wrapper { gap: 24px; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid rgb(17 17 17 / 25%); }
-.brat .pub-visual { flex: 0 0 240px; width: 240px; height: 160px; margin: 0; border: 1px solid #111; box-sizing: border-box; background: #fff; }
-.brat .conf-logo { width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
-.brat .pub-badges { position: absolute; margin-top: 0; }
-.brat .pub-badges .ranka, .brat .pub-badges .pp-name { background: #111; color: #fff; border: 0; border-radius: 4px; box-shadow: none; padding: 3px 5px; white-space: nowrap; }
+.brat .publication-group + .publication-group { border-color: var(--line); }
+.brat .publication-wrapper { gap: 24px; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+.brat .publication-group > .publication-wrapper:last-child { border-bottom: 0; padding-bottom: 0; }
+.brat .pub-visual { flex: 0 0 240px; width: 240px; height: auto; margin: 0; border: 0; box-sizing: border-box; background: transparent; }
+.brat .pub-visual::after { content: none; }
+.brat .conf-logo { width: 100%; height: 160px; object-fit: contain; border-radius: 0; }
+.brat .pub-badges { position: static; margin-top: 8px; gap: 4px; }
+.brat .pub-badges .ranka, .brat .pub-badges .pp-name { background: transparent; color: inherit; border: 0; border-radius: 0; box-shadow: none; padding: 0; font-size: 12px; font-weight: 400; line-height: 1.5; white-space: normal; }
 .brat .publication { min-width: 0; }
 .brat .publication a { white-space: nowrap; }
 .brat .papertitle { font-size: 17px; line-height: 1.35; margin-bottom: 8px; }
-.brat .footer { border-top: 1px solid #111; text-align: left; padding: 20px 0 32px; }
+.brat .footer { color: var(--ink); border-top: 1px solid var(--line); text-align: left; padding: 20px 0 32px; }
 @media (max-width: 768px) {
   .brat { padding: 0 20px; }
-  .brat .header { padding-top: 20px; }
-  .brat .brat-hero { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 36px 0 16px; }
+  .brat .header { padding: 20px 0 24px; }
+  .brat .brat-hero { display: grid; grid-template-columns: minmax(0, 1fr) clamp(80px, 24vw, 104px); align-items: center; gap: 20px; margin: 30px 0 0; }
+  .brat .brat-heading { min-width: 0; }
+  .brat .brat-tagline { max-width: 20ch; margin-top: 10px; font-size: 16px; line-height: 1.45; letter-spacing: -0.015em; }
   .brat .site-title { margin: 0; min-width: 0; }
-  .brat .site-name { font-size: clamp(40px, 12vw, 76px); white-space: nowrap; transform: none; }
-  .brat .mobile-profile { display: block; flex: none; width: clamp(72px, 22vw, 120px); aspect-ratio: 5 / 6; object-fit: cover; border: 0; box-sizing: border-box; }
+  .brat .site-name { font-size: clamp(30px, 8vw, 38px); white-space: nowrap; transform: none; }
+  .brat .mobile-profile { display: block; width: 100%; aspect-ratio: 5 / 6; object-fit: cover; border: 0; box-sizing: border-box; }
   .brat .about-content { flex-direction: column; gap: 22px; align-items: stretch; text-align: left; }
   .brat .profile-pic { display: none; }
   .brat .about-para, .brat .social-note, .brat .section ul li,
   .brat .project-note, .brat .publication p:not(.papertitle),
   .brat .publication a, .brat .news-toggle { font-size: 14px; }
   .brat .project-map { display: flex; flex-direction: column; }
-  .brat a.project-cluster + a.project-cluster { border-left: 0 !important; border-top: 1px solid #111 !important; }
+  .brat a.project-cluster + a.project-cluster { border-left: 0 !important; border-top: 1px solid var(--line) !important; }
   .brat .publication-wrapper { gap: 16px; }
   .brat .pub-visual { flex: none; width: 240px; align-self: flex-start; }
   .brat #press li { grid-template-columns: 76px minmax(0, 1fr); gap: 2px 12px; margin-bottom: 16px; }
