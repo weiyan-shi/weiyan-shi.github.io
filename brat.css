@@ -155,10 +155,6 @@ html:has(body.brat) {
 .brat a.project-cluster:hover { box-shadow: inset 0 -5px var(--ink); }
 .brat .ranka { display: inline; border: 0; border-radius: 0; background: transparent; color: inherit; padding: 0; white-space: normal; }
 .brat .ranka .label-icon { color: inherit; }
-.brat .ranka .fa-trophy {
-  color: #3688c6;
-  text-shadow: 0 0 3px #b6e5ff, 0 0 8px rgb(91 187 255 / 70%);
-}
 .brat #press li { display: grid; grid-template-columns: 76px 190px minmax(0, 1fr); gap: 12px; align-items: baseline; margin-bottom: 18px; }
 .brat #press .date-tag, .brat #press .ads { margin: 0; white-space: nowrap; }
 .brat #press li a:not(.link-list a):not(.publication a):not(#email):not(.social-icon-link) {
