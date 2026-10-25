@@ -74,34 +74,61 @@ html:has(body.brat) {
   background: var(--accent);
 }
 .brat a:focus-visible, .brat button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.brat .link-list { margin-top: 22px; gap: 16px; }
-.brat .link-list a { width: auto; }
-.brat .link-list a, .brat .link-list a i { color: var(--ink); }
-.brat .link-list a:is(:hover, :focus-visible) i { color: inherit; }
-.brat .link-list a:hover { transform: translateY(-2px); }
-.brat .link-list a.follow-x {
+.brat .link-list.profile-badges { margin-top: 22px; gap: 8px; flex-direction: column; align-items: flex-start; }
+.brat .profile-badges .quick-contact-label { margin: 6px 0 0; font-size: 13px; line-height: 1.4; color: var(--ink); }
+.brat .profile-badges .badge-group { display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%; }
+.brat .profile-badges a.profile-badge {
+  display: inline-flex;
   flex: none;
-  height: 28px;
-  padding: 0 9px;
-  gap: 6px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 14px;
+  width: auto;
+  height: 22px;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #f4f7fa;
+  color: #425466;
+  font: 11px/1 Verdana, Geneva, sans-serif;
+  text-transform: none;
   white-space: nowrap;
   text-decoration: none;
+  transition: box-shadow 0.15s ease;
 }
-.brat .link-list a.follow-x .x-icon { color: inherit; font-size: 18px; margin: 0; }
-.brat .link-list a.follow-x:focus-visible { outline-color: var(--ink); transform: translateY(-2px); }
-.brat .link-list a[aria-label="RedNote"] { background: transparent; padding: 0; width: 32px; }
+.brat .profile-badge .badge-label, .brat .profile-badge .badge-value {
+  display: inline-flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 6px;
+  gap: 4px;
+}
+.brat .profile-badge .badge-label { background: var(--badge-tint, #dceafe); }
+.brat .profile-badge .badge-value { font-variant-numeric: tabular-nums; }
+.brat .profile-badges .profile-badge i {
+  color: var(--badge-icon, #4285f4);
+  background: none;
+  font-size: 13px;
+  margin: 0;
+}
+.brat .profile-badge.badge-orcid { --badge-tint: #e8f0db; --badge-icon: #648522; }
+.brat .profile-badge.badge-linkedin { --badge-tint: #dceafa; --badge-icon: #0a66c2; }
+.brat .profile-badge.badge-dblp { --badge-tint: #e1edf5; --badge-icon: #36779d; }
+.brat .profile-badge.rednote-profile { --badge-tint: #ffe0e6; }
+.brat .profile-badges .rednote-mark { color: #ff2442; width: 20px; height: 10px; }
+.brat .profile-badge.badge-x { --badge-tint: #e6e6e6; --badge-icon: #222; }
+.brat .profile-badges a.profile-badge:is(:hover, :focus-visible) {
+  transform: none;
+  box-shadow: 0 0 0 1px var(--line);
+}
 .brat .social-note {
   position: relative;
   background: var(--panel);
   color: var(--ink);
   border: 0;
   border-radius: 0;
-  padding: 18px 20px;
-  margin: 28px 0 12px;
+  padding: 10px 16px;
+  margin: 24px 0 12px;
+  width: fit-content;
+  max-width: 100%;
 }
 .brat .social-note::before, .brat .social-note::after {
   content: "";
@@ -115,6 +142,7 @@ html:has(body.brat) {
 .brat .social-note::before { top: -11px; }
 .brat .social-note::after { bottom: -11px; transform: rotate(180deg); }
 .brat .social-note-intro { color: inherit; }
+.brat .social-alias { white-space: nowrap; }
 .brat .social-handle { color: inherit; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
 .brat .cockroach-icon { display: inline-block; width: 26px; height: 29px; vertical-align: -8px; margin-left: 3px; object-fit: contain; transform: rotate(-20deg); }
 .brat .social-icon-link { color: var(--ink); }
@@ -133,7 +161,6 @@ html:has(body.brat) {
   mask: url("images/icons/xiaohongshu.svg") center / contain no-repeat;
 }
 .brat .social-icon-link[aria-label="RedNote 小红书"] { width: 32px; }
-.brat .link-list a[aria-label="RedNote"]:is(:hover, :focus-visible) { color: var(--ink); }
 .brat .social-icon-link[aria-label="RedNote 小红书"]:is(:hover, :focus-visible) { color: var(--ink); transform: translateY(-2px); }
 .brat .contact-line { margin-top: 14px; }
 .brat .copy-email { border-bottom: 0; }
@@ -205,7 +232,6 @@ html:has(body.brat) {
 }
 @media (max-width: 380px) {
   .brat .link-list { gap: 6px; }
-  .brat .link-list a.follow-x { padding: 0 7px; gap: 6px; }
 }
 
 .brat .external-arrow { display: inline-block; width: 0.9em; height: 0.9em; vertical-align: -0.08em; }
