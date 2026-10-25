@@ -85,6 +85,7 @@ html:has(body.brat) {
   padding: 0;
   gap: 0;
   overflow: hidden;
+  border: 1px solid #b7c8d9;
   border-radius: 3px;
   background: #f4f7fa;
   color: #425466;
@@ -92,7 +93,7 @@ html:has(body.brat) {
   text-transform: none;
   white-space: nowrap;
   text-decoration: none;
-  transition: box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 .brat .profile-badge .badge-label, .brat .profile-badge .badge-value {
   display: inline-flex;
@@ -102,7 +103,7 @@ html:has(body.brat) {
   gap: 4px;
 }
 .brat .profile-badge .badge-label { background: var(--badge-tint, #dceafe); }
-.brat .profile-badge .badge-value { font-variant-numeric: tabular-nums; }
+.brat .profile-badge .badge-value { background: #fff; color: var(--ink); font-variant-numeric: tabular-nums; }
 .brat .profile-badges .profile-badge i {
   color: var(--badge-icon, #4285f4);
   background: none;
@@ -116,8 +117,9 @@ html:has(body.brat) {
 .brat .profile-badges .rednote-mark { color: #ff2442; width: 20px; height: 10px; }
 .brat .profile-badge.badge-x { --badge-tint: #e6e6e6; --badge-icon: #222; }
 .brat .profile-badges a.profile-badge:is(:hover, :focus-visible) {
-  transform: none;
-  box-shadow: 0 0 0 1px var(--line);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 7px rgb(39 68 93 / 14%);
 }
 .brat .social-note {
   position: relative;
