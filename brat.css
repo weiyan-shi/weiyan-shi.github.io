@@ -1,5 +1,12 @@
 /* Pale-blue homepage theme. */
 @font-face {
+  font-family: 'Nickname Handwriting';
+  src: url('fonts/ma-shan-zheng/nickname.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Mansalva';
   src: url('fonts/mansalva/Mansalva-Regular.ttf') format('truetype');
   font-style: normal;
@@ -150,6 +157,7 @@ html:has(body.brat) {
 .brat .social-note::after { bottom: -11px; transform: rotate(180deg); }
 .brat .social-note-intro { color: inherit; }
 .brat .social-alias { white-space: nowrap; }
+.brat .social-handle-zh { font-family: 'Nickname Handwriting', 'Kaiti SC', KaiTi, cursive; font-size: 25px; font-weight: 400; line-height: 1; vertical-align: -2px; }
 .brat .social-handle { color: inherit; font-family: 'Mansalva', Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0.01em; line-height: 1; }
 .brat .cockroach-icon { display: inline-block; width: 26px; height: 29px; vertical-align: -8px; margin-left: 3px; object-fit: contain; transform: rotate(-20deg); }
 .brat .social-icon-link { color: var(--ink); }
